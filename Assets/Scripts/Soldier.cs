@@ -107,8 +107,13 @@ public class Soldier : MonoBehaviour
     {
         if (GetComponent<Flight>().isFlying)
         {
+            agent.enabled = false;
             this.enabled = false;
             return;
+        }
+        else
+        {
+            agent.enabled = true;
         }
         Soldier _target = target;
         State _state = state;

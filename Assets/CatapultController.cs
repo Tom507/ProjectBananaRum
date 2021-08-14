@@ -43,7 +43,9 @@ public class CatapultController : MonoBehaviour
                 Flight f = go.GetComponent<Flight>();
                 f.isFlying = true;
                 f.Initialize(catapultSpring);
-                
+                Soldier s = go.GetComponent<Soldier>();
+                s.side = Soldier.Side.Player;
+                s.sightDistance = 50f;
             }
             catapultSpring = 0;
         }
