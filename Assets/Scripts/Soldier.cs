@@ -41,13 +41,15 @@ public class Soldier : MonoBehaviour
 
     public AttackTrigger attackTrigger;
 
+    public bool randomiseWeapon = true;
+
     // Start is called before the first frame update
     void Awake()
     {
         attackTrigger = GetComponentInChildren<AttackTrigger>();
         agent = GetComponent<NavMeshAgent>();
         Soldiers.allSoldiers.Add(this);
-        weapon = (Weapon)Random.Range(0, 3);
+        if(randomiseWeapon) weapon = (Weapon)Random.Range(0, 3);
         //side = (Side)Random.Range(0, 2);
     }
 

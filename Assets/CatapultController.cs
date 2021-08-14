@@ -7,6 +7,9 @@ public class CatapultController : MonoBehaviour
 {
     public Canvas catapultArrowCanvas;
     public GameObject spawnable;
+
+    public Soldier.Weapon currentSoldier = Soldier.Weapon.Sword;
+
     private void Start()
     {
         catapultArrowCanvas= GetComponent<Canvas>();
@@ -35,7 +38,7 @@ public class CatapultController : MonoBehaviour
             catapultSpring = Mathf.Clamp(catapultSpring, 0f, 100f);
         }else
         {
-            if(catapultSpring > 1)
+            if(catapultSpring > 5)
             {
                 Debug.Log("Launch :: " + catapultSpring);
                 //spawn
@@ -46,6 +49,8 @@ public class CatapultController : MonoBehaviour
                 Soldier s = go.GetComponent<Soldier>();
                 s.side = Soldier.Side.Player;
                 s.sightDistance = 50f;
+                s.randomiseWeapon = false;
+                s.weapon = currentSoldier;
             }
             catapultSpring = 0;
         }
