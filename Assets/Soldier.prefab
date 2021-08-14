@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 2159555153358444689}
   - component: {fileID: 890809699296083393}
   - component: {fileID: 1654028469486534636}
+  - component: {fileID: 1454181921}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Soldier
@@ -541,6 +542,7 @@ MonoBehaviour:
   state: 0
   target: {fileID: 0}
   agent: {fileID: 0}
+  sightDistance: 15
   attackTrigger: {fileID: 0}
   areaDamage: 0
 --- !u!195 &2159555153358444689
@@ -595,6 +597,57 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1454181921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159555153358444688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb98813c82aeb624eb3dc85258257f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlying: 0
+  s: {fileID: 0}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 4.756611
+      outSlope: 4.756611
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.05042383
+    - serializedVersion: 3
+      time: 0.5040626
+      value: 0.99764156
+      inSlope: -0.20125262
+      outSlope: -0.20125262
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.37504503
+    - serializedVersion: 3
+      time: 0.99993265
+      value: 0.002358491
+      inSlope: -2.6982968
+      outSlope: -2.6982968
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.09321348
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  flightTimeMax: 0.5
+  flightDistanceMax: 90
+  startDistance: -50
+  flightHeight: 20
 --- !u!1 &2159555153680636361
 GameObject:
   m_ObjectHideFlags: 0

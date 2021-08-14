@@ -105,6 +105,11 @@ public class Soldier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<Flight>().isFlying)
+        {
+            this.enabled = false;
+            return;
+        }
         Soldier _target = target;
         State _state = state;
         switch (state)
