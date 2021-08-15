@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyShip : MonoBehaviour
 {
     public int Strength = 10;
     public float waypointCadens = 15f;
+
+    public Text strengthText;
 
     public GameObject spawnArea;
 
@@ -20,6 +23,7 @@ public class EnemyShip : MonoBehaviour
         spawnArea = GameObject.Find("EnemySpawner");
         Vector3 waypointPos = new Vector3(Random.Range(-1.0f, 1.0f) * (spawnArea.transform.localScale.x / 2), 0, Random.Range(-1.0f, 1.0f) * (spawnArea.transform.localScale.z / 2));
         agent.SetDestination(waypointPos);
+        strengthText.text = Strength.ToString();
     }
 
     public int getReward()

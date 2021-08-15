@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ship"))
         {
+            PlayerManager.Instance.strengthOfBattleShip = other.GetComponent<EnemyShip>().Strength;
             Debug.Log("Trigger Battle");
         }
     }

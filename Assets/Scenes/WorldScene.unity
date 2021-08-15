@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e1b7aeb00c71d439cd02fa93513630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnAmount: 20
+  SpawnAmount: 25
   spawnable: {fileID: 1308094200}
 --- !u!1 &1512760764 stripped
 GameObject:
@@ -1597,10 +1597,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7920169664185768336, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
-      propertyPath: spawnArea
-      value: 
-      objectReference: {fileID: 1352221638}
     - target: {fileID: 7920169664185768337, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
       propertyPath: m_Name
       value: EnemyShip
@@ -1648,6 +1644,26 @@ PrefabInstance:
     - target: {fileID: 7920169664185768338, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920169664353648171, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00038348138
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920169664353648171, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920169664353648171, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920169664353648171, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920169664353648171, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 179.956
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
