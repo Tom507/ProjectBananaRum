@@ -380,6 +380,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6753824190068631377, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
   m_PrefabInstance: {fileID: 326524182}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &326524184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8834516100795445599, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+  m_PrefabInstance: {fileID: 326524182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &326524185 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6753824190026644459, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+  m_PrefabInstance: {fileID: 326524182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &391230943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1161,6 +1183,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6753824190068631377, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
   m_PrefabInstance: {fileID: 1739498767}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1739498769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8834516100795445599, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+  m_PrefabInstance: {fileID: 1739498767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1739498770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6753824190026644459, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+  m_PrefabInstance: {fileID: 1739498767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1806118434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,11 +1470,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordsAmount: {fileID: 2819507111038366528}
-  axeAmount: {fileID: 0}
-  lanceAmount: {fileID: 0}
+  axeAmount: {fileID: 326524185}
+  lanceAmount: {fileID: 1739498770}
   swordPrice: {fileID: 616233460}
-  axePrice: {fileID: 0}
-  lanceprice: {fileID: 0}
+  axePrice: {fileID: 326524184}
+  lanceprice: {fileID: 1739498769}
   goldAmount: {fileID: 412558271}
 --- !u!114 &2819507111038366528 stripped
 MonoBehaviour:
