@@ -30,21 +30,37 @@ public class PlayerManager : MonoBehaviour
         {
             case Soldier.Weapon.Sword:
                 price = priceSword;
+                if (Buy(price))
+                {
+                    Swords++;
+                    return true;
+                }
+                
                 break;
             case Soldier.Weapon.Axe:
                 price = priceAxe;
+                if (Buy(price))
+                {
+                    Axes++;
+                    return true;
+                }
                 break;
             case Soldier.Weapon.Lance:
                 price = priceLance;
+                if (Buy(price))
+                {
+                    Lances++;
+                    return true;
+                }
                 break;
         }
-        return Buy(price);
+        return false;
     }
     public bool Buy(int gold)
     {
         if(Gold >= gold)
         {
-            Gold -= gold;
+            Gold = Gold - gold;
             return true;
         }
         else { return false; }
