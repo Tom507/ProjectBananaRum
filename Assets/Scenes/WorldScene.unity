@@ -369,9 +369,29 @@ PrefabInstance:
       propertyPath: m_Text
       value: Buy Axe
       objectReference: {fileID: 0}
+    - target: {fileID: 6753824189161291177, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_Text
+      value: Buy Axe
+      objectReference: {fileID: 0}
     - target: {fileID: 6753824190068631377, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753824190068631377, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 318
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753824190068631377, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -67.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753824190068631378, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2819507109685307582}
+    - target: {fileID: 6753824190068631378, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyAxe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
@@ -792,6 +812,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: ed177941fb7deef47b865f6df4ec9f91, type: 2}
     - target: {fileID: -7029948723529949830, guid: d407124ac0036c24f8740526d6bef24b, type: 3}
+      propertyPath: m_Name
+      value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: d407124ac0036c24f8740526d6bef24b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -905,6 +929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22680b5bcf17b85408c511fb24ace629, type: 3}
+--- !u!1 &1308094200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7920169664185768337, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
+  m_PrefabInstance: {fileID: 7920169664870237817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1352221638
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +946,6 @@ GameObject:
   - component: {fileID: 1352221642}
   - component: {fileID: 1352221641}
   - component: {fileID: 1352221640}
-  - component: {fileID: 1352221639}
   - component: {fileID: 1352221644}
   m_Layer: 0
   m_Name: EnemySpawner
@@ -926,20 +954,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1352221639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352221638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81bebc05f6c89c340a13329871c1084a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnAmount: 20
-  spawnable: {fileID: 7920169664185768337, guid: cec94f2967c8f9b49b2689f70cf52b95, type: 3}
 --- !u!65 &1352221640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1028,8 +1042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e1b7aeb00c71d439cd02fa93513630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnAmount: 10
-  spawnable: {fileID: 0}
+  SpawnAmount: 20
+  spawnable: {fileID: 1308094200}
 --- !u!1 &1512760764 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7029948723529949830, guid: d407124ac0036c24f8740526d6bef24b, type: 3}
@@ -1172,9 +1186,29 @@ PrefabInstance:
       propertyPath: m_Text
       value: Buy Lance
       objectReference: {fileID: 0}
+    - target: {fileID: 6753824189161291177, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_Text
+      value: Buy Lance
+      objectReference: {fileID: 0}
     - target: {fileID: 6753824190068631377, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753824190068631377, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 519
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753824190068631377, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -67.229
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753824190068631378, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2819507109685307582}
+    - target: {fileID: 6753824190068631378, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyLance
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc23434518bb2a14abcb7a4176ccaca8, type: 3}
@@ -1234,6 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1ac915b533e514a96fa3eb37886f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strengthOfBattleShip: 10
   Gold: 8
   Swords: 5
   Axes: 4

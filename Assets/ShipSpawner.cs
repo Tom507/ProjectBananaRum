@@ -13,6 +13,8 @@ public class ShipSpawner : MonoBehaviour
         {
             Vector3 spawnPos = new Vector3(Random.Range(-1.0f, 1.0f) * (transform.localScale.x / 2), Random.Range(-1.0f, 1.0f) * (transform.localScale.y / 2), Random.Range(-1.0f, 1.0f) * (transform.localScale.z / 2));
             GameObject go = Instantiate(spawnable, spawnPos, Quaternion.identity);
+            EnemyShip ship = go.GetComponent<EnemyShip>();
+            ship.Strength = Random.Range(5, 25);
         }
     }
 }

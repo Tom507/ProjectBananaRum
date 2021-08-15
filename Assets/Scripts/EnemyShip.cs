@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyShip : MonoBehaviour
 {
-    public float Strength = 10f;
+    public int Strength = 10;
     public float waypointCadens = 15f;
 
     public GameObject spawnArea;
@@ -17,6 +17,7 @@ public class EnemyShip : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        spawnArea = GameObject.Find("EnemySpawner");
         Vector3 waypointPos = new Vector3(Random.Range(-1.0f, 1.0f) * (spawnArea.transform.localScale.x / 2), 0, Random.Range(-1.0f, 1.0f) * (spawnArea.transform.localScale.z / 2));
         agent.SetDestination(waypointPos);
     }
@@ -38,6 +39,10 @@ public class EnemyShip : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //if(collision.gameObject.name == )
+        Debug.Log("col:: "+collision.gameObject.name);
+        if(collision.gameObject.name == "Map" && Time.time < 1f)
+        {
+            Destroy(gameObject);
+        }
     }
 }

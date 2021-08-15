@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public int strengthOfBattleShip = 10;
+
     public static PlayerManager Instance;
 
     public int Gold = 8;
