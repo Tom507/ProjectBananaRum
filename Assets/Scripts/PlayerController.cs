@@ -17,4 +17,12 @@ public class PlayerController : MonoBehaviour
         input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         agent.SetDestination(transform.position + input);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ship"))
+        {
+            Debug.Log("Trigger Battle");
+        }
+    }
 }
