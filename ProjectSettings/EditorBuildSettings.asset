@@ -20,10 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/CreditsScene.unity
     guid: 754917c6f3585464a9cc63b2de84601e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EndLose.unity
     guid: 8ab37fd2b3eaf8b40b3085254ebbe690
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EndWin.unity
     guid: 28acf9d2bab4efd4ca4eacc4908e6111
   m_configObjects: {}
