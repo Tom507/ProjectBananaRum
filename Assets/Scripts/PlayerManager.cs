@@ -26,6 +26,11 @@ public class PlayerManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public int countSoldiers()
+    {
+        return Swords + Axes + Lances;
+    }
+
     public void removeSoldier(Soldier.Weapon weapon)
     {
         Debug.Log("Remove Soldier:: " + weapon);

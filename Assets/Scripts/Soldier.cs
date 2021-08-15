@@ -59,7 +59,16 @@ public class Soldier : MonoBehaviour
         GetComponentInChildren<Slider>().value = health;
         if(health <= 0)
         {
+            //Debug.Log("damage");
             Soldiers.allSoldiers.Remove(this);
+            if(side == Side.Computer)
+            {
+                Soldiers.computerCount--;
+            }
+            else
+            {
+                Soldiers.playercount--;
+            }
             Destroy(gameObject);
         }
     }
