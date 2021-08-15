@@ -9,22 +9,6 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("WorldScene");
     }
-    
-    public void How2Play ()
-    {
-        SceneManager.LoadScene("How2PlayScene");
-    }
-
-    public void Options ()
-    {
-        SceneManager.LoadScene("How2PlayScene");
-    }
-
-    public void Credits ()
-    {
-        SceneManager.LoadScene("CreditsScene");
-    }
-
     public void QuitGame ()
     {
         Debug.Log("Quit!");
