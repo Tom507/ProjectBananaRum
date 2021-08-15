@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        agent.SetDestination(transform.position + input);
+        agent.SetDestination(transform.position + input * 5);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -12,7 +12,7 @@ public class SimpleCameraFollow : MonoBehaviour
 		offset = transform.position - target.position;
     }
 
-    void FixedUpdate()
+    void Update()
 	{
 		Vector3 desiredPosition = target.position + offset;
 		Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
