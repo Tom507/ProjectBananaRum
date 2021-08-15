@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoardingScene.unity
     guid: ced104373b4bf7a458e9e97863824e8b
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 754917c6f3585464a9cc63b2de84601e
   m_configObjects: {}
