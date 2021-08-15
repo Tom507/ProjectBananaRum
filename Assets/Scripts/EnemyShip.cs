@@ -38,6 +38,6 @@ public class EnemyShip : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == )
+        //if(collision.gameObject.name == )
     }
 }
