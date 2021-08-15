@@ -7,6 +7,6 @@ using UnityEngine.SceneManagement;
 public class Credits : MonoBehaviour {
     public void Back2Menu ()
     {
-        SceneManager.LoadScene("Main Screen");
+        SceneManager.LoadScene("StartScreen");
     }
 }
