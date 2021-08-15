@@ -35,4 +35,9 @@ public class EnemyShip : MonoBehaviour
             timeLastChange = Time.time;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == )
+    }
 }
