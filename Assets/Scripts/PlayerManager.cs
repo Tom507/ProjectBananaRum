@@ -25,6 +25,23 @@ public class PlayerManager : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
     }
+
+    public void removeSoldier(Soldier.Weapon weapon)
+    {
+        Debug.Log("Remove Soldier:: " + weapon);
+        switch (weapon)
+        {
+            case Soldier.Weapon.Sword:
+                Swords--;
+                break;
+            case Soldier.Weapon.Axe:
+                Axes--;
+                break;
+            case Soldier.Weapon.Lance:
+                Lances--;
+                break;
+        }
+    }
     public bool Buy(Soldier.Weapon weapon)
     {
         int price = 0;

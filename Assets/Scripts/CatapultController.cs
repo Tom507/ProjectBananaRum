@@ -51,6 +51,8 @@ public class CatapultController : MonoBehaviour
                 s.sightDistance = 50f;
                 s.randomiseWeapon = false;
                 s.weapon = currentSoldier;
+                PlayerManager.Instance.removeSoldier(currentSoldier);
+                MonoBehaviour.FindObjectsOfType<SelectUi>()[0].UpdateUI();
             }
             catapultSpring = 0;
         }

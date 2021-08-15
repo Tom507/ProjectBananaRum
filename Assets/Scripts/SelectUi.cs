@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectUi : MonoBehaviour
 {
@@ -9,6 +10,28 @@ public class SelectUi : MonoBehaviour
     public GameObject lanceSelected;
 
     public CatapultController catControll;
+
+    public Text swordsAmount;
+    public Text axeAmount;
+    public Text lanceAmount;
+
+    PlayerManager pm;
+
+    public void UpdateUI()
+    {
+        Debug.Log("UpdateUI");
+        swordsAmount.text = "#" + pm.Swords.ToString();
+        axeAmount.text = "#" + pm.Axes.ToString();
+        lanceAmount.text = "#" + pm.Lances.ToString();
+    }
+    private void Start()
+    {
+        pm = PlayerManager.Instance;
+
+        swordsAmount.text = "#" + pm.Lances.ToString();
+        axeAmount.text = "#" + pm.Axes.ToString();
+        lanceAmount.text = "#" + pm.Lances.ToString();
+    }
 
     public void SelectSword()
     {

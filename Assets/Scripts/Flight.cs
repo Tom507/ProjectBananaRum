@@ -48,7 +48,7 @@ public class Flight : MonoBehaviour
                 return;
             }
             float flightprogress = Mathf.Clamp(1 - ((flightTime - timeSinceStart) / flightTime), 0, 1);
-            Debug.Log("Progress:: " + flightprogress);
+            //Debug.Log("Progress:: " + flightprogress);
             transform.position = startPos + new Vector3(flightDistance * flightprogress, curve.Evaluate(flightprogress) * flightHeight, 0);
         }
     }

@@ -9,6 +9,10 @@ public class SpawnArea : MonoBehaviour
 
     private void Start()
     {
+        if(PlayerManager.Instance != null)
+        {
+            SpawnAmount = PlayerManager.Instance.strengthOfBattleShip;
+        }
         for(int i = 0; i< SpawnAmount; i++)
         {
             Vector3 spawnPos = new Vector3(Random.Range(-1.0f, 1.0f) * (transform.localScale.x / 2), Random.Range(-1.0f, 1.0f) * (transform.localScale.y / 2), Random.Range(-1.0f, 1.0f) * (transform.localScale.z / 2));

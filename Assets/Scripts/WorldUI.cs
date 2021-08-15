@@ -21,7 +21,7 @@ public class WorldUI : MonoBehaviour
     private void Start()
     {
         pm = PlayerManager.Instance;
-        swordsAmount.text = "#" + pm.Lances.ToString();
+        swordsAmount.text = "#" + pm.Swords.ToString();
         axeAmount.text = "#" + pm.Axes.ToString();
         lanceAmount.text = "#" + pm.Lances.ToString();
 

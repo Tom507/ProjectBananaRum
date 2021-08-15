@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         {
             PlayerManager.Instance.strengthOfBattleShip = other.GetComponent<EnemyShip>().Strength;
             Debug.Log("Trigger Battle");
+            SceneManager.LoadScene("BoardingScene");
         }
     }
 }
