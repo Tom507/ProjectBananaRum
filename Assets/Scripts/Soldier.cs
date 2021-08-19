@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class Soldier : MonoBehaviour
 {
+    public static List<Soldier> allSoldiers = new List<Soldier>();
+    public static int computerCount = 0;
+    public static int playercount = 0;
+
     public enum Side
     {
         Player,
@@ -48,7 +52,7 @@ public class Soldier : MonoBehaviour
     {
         attackTrigger = GetComponentInChildren<AttackTrigger>();
         agent = GetComponent<NavMeshAgent>();
-        Soldiers.allSoldiers.Add(this);
+        Soldier.allSoldiers.Add(this);
         if(randomiseWeapon) weapon = (Weapon)Random.Range(0, 3);
         //side = (Side)Random.Range(0, 2);
     }
@@ -60,14 +64,14 @@ public class Soldier : MonoBehaviour
         if(health <= 0)
         {
             //Debug.Log("damage");
-            Soldiers.allSoldiers.Remove(this);
+            Soldier.allSoldiers.Remove(this);
             if(side == Side.Computer)
             {
-                Soldiers.computerCount--;
+                Soldier.computerCount--;
             }
             else
             {
-                Soldiers.playercount--;
+                Soldier.playercount--;
             }
             Destroy(gameObject);
         }
@@ -234,7 +238,7 @@ public class Soldier : MonoBehaviour
     {
         float minimalDistance = 100000000f;
         Soldier closest = null;
-        foreach( Soldier s in Soldiers.allSoldiers)
+        foreach( Soldier s in Soldier.allSoldiers)
         {
             //if (s == null) Soldiers.allSoldiers.Remove(s);
             float distance = (transform.position - s.transform.position).magnitude;

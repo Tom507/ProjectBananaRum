@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public int strengthOfBattleShip = 10;
+    public int battleShipReward = 0;
 
     public static PlayerManager Instance;
 
@@ -19,11 +20,15 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
-        if (!Instance) { Instance = this; } else
+        if (!Instance) 
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        } else
         {
             DestroyImmediate(gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
+        
     }
 
     public int countSoldiers()
@@ -31,6 +36,19 @@ public class PlayerManager : MonoBehaviour
         return Swords + Axes + Lances;
     }
 
+    public bool soldierExists(Soldier.Weapon weapon)
+    {
+        switch (weapon)
+        {
+            case Soldier.Weapon.Sword:
+                return Swords > 0;
+            case Soldier.Weapon.Axe:
+                return Axes > 0;
+            case Soldier.Weapon.Lance:
+                return Lances > 0;
+        }
+        return false;
+    }
     public void removeSoldier(Soldier.Weapon weapon)
     {
         Debug.Log("Remove Soldier:: " + weapon);
@@ -79,6 +97,21 @@ public class PlayerManager : MonoBehaviour
                 break;
         }
         return false;
+    }
+    public void addSoldier(Soldier.Weapon weapon)
+    {
+        switch (weapon)
+        {
+            case Soldier.Weapon.Sword:
+                Swords++;
+                break;
+            case Soldier.Weapon.Axe:
+                Axes++;
+                break;
+            case Soldier.Weapon.Lance:
+                Lances++;
+                break;
+        }
     }
     public bool Buy(int gold)
     {

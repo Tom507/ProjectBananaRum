@@ -38,11 +38,11 @@ public class CatapultController : MonoBehaviour
             catapultSpring = Mathf.Clamp(catapultSpring, 0f, 100f);
         }else
         {
-            if(catapultSpring > 5)
+            if(catapultSpring > 5 && PlayerManager.Instance.soldierExists(currentSoldier))
             {
                 Debug.Log("Launch :: " + catapultSpring);
                 //spawn
-                GameObject go= Instantiate(spawnable, transform.position + spawnPositionOffset, Quaternion.identity);
+                GameObject go = Instantiate(spawnable, transform.position + spawnPositionOffset, Quaternion.identity);
                 Flight f = go.GetComponent<Flight>();
                 f.isFlying = true;
                 f.Initialize(catapultSpring);

@@ -9,7 +9,7 @@ public class KillArea : MonoBehaviour
         if (other.gameObject.CompareTag("Soldier"))
         {
             Soldier s = other.GetComponent<Soldier>();
-            Soldiers.allSoldiers.Remove(s);
+            Soldier.allSoldiers.Remove(s);
             s.TakeDamage(200f);
         }
     }
