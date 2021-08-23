@@ -48,7 +48,7 @@ public class CatapultController : MonoBehaviour
                 f.Initialize(catapultSpring);
                 Soldier s = go.GetComponent<Soldier>();
                 s.side = Soldier.Side.Player;
-                s.sightDistance = 50f;
+                s.sightDistance = 10000f;
                 s.randomiseWeapon = false;
                 s.weapon = currentSoldier;
                 PlayerManager.Instance.removeSoldier(currentSoldier);
