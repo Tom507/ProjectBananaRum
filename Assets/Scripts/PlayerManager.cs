@@ -18,6 +18,32 @@ public class PlayerManager : MonoBehaviour
     public int priceAxe = 7;
     public int priceLance = 3;
 
+    #region TimeManager
+    private static bool timePaused = false;
+    public static void PlayPauseTime()
+    {
+        if (timePaused)
+        {
+            PlayTime();
+        }
+        else
+        {
+            PauseTime();
+        }
+    }
+    public static void PauseTime()
+    {
+        Time.timeScale = 0;
+        timePaused = true;
+    }
+    public static void PlayTime()
+    {
+        
+        Time.timeScale = 1;
+        timePaused = false;
+    }
+    #endregion
+
     void Start()
     {
         if (!Instance) 
@@ -31,12 +57,12 @@ public class PlayerManager : MonoBehaviour
         
     }
 
-    public int countSoldiers()
+    public int CountSoldiers()
     {
         return Swords + Axes + Lances;
     }
 
-    public bool soldierExists(Soldier.Weapon weapon)
+    public bool SoldierExists(Soldier.Weapon weapon)
     {
         switch (weapon)
         {
@@ -49,7 +75,7 @@ public class PlayerManager : MonoBehaviour
         }
         return false;
     }
-    public void removeSoldier(Soldier.Weapon weapon)
+    public void RemoveSoldier(Soldier.Weapon weapon)
     {
         Debug.Log("Remove Soldier:: " + weapon);
         switch (weapon)
@@ -98,7 +124,7 @@ public class PlayerManager : MonoBehaviour
         }
         return false;
     }
-    public void addSoldier(Soldier.Weapon weapon)
+    public void AddSoldier(Soldier.Weapon weapon)
     {
         switch (weapon)
         {

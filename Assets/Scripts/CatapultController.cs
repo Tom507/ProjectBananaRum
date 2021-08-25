@@ -38,7 +38,7 @@ public class CatapultController : MonoBehaviour
             catapultSpring = Mathf.Clamp(catapultSpring, 0f, 100f);
         }else
         {
-            if(catapultSpring > 5 && PlayerManager.Instance.soldierExists(currentSoldier))
+            if(catapultSpring > 5 && PlayerManager.Instance.SoldierExists(currentSoldier))
             {
                 Debug.Log("Launch :: " + catapultSpring);
                 //spawn
@@ -51,7 +51,7 @@ public class CatapultController : MonoBehaviour
                 s.sightDistance = 10000f;
                 s.randomiseWeapon = false;
                 s.weapon = currentSoldier;
-                PlayerManager.Instance.removeSoldier(currentSoldier);
+                PlayerManager.Instance.RemoveSoldier(currentSoldier);
                 MonoBehaviour.FindObjectsOfType<SelectUi>()[0].UpdateUI();
             }
             catapultSpring = 0;

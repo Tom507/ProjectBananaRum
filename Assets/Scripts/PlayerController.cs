@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioClip battleStartClip;
+    public float battleDelay = 0.75f;
+
     NavMeshAgent agent;
     private void Start()
     {
@@ -29,8 +32,16 @@ public class PlayerController : MonoBehaviour
             EnemyShip ship = other.GetComponent<EnemyShip>();
             pm.strengthOfBattleShip = ship.Strength;
             pm.battleShipReward = ship.getReward();
+
+            AudioSource aS = GetComponent<AudioSource>();
+            aS.clip = battleStartClip;
+            aS.Play();
+
             Debug.Log("Trigger Battle");
-            SceneManager.LoadScene("BoardingScene");
+            StartCoroutine(Utils.ExecuteAfterSeconds(battleDelay, () =>
+            {
+                SceneManager.LoadScene("BoardingScene");
+            }));
         }
     }
 }

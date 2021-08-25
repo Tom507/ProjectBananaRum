@@ -18,9 +18,9 @@ public class BattleEnd : MonoBehaviour
         StartCoroutine(Utils.ExecuteAfterSeconds(0.1f, () =>
         {
             pm = PlayerManager.Instance;
-            Soldier.playercount = pm.countSoldiers();
+            Soldier.playercount = pm.CountSoldiers();
             Soldier.computerCount = pm.strengthOfBattleShip;
-            Debug.Log("soldierCount::" + pm.countSoldiers());
+            Debug.Log("soldierCount::" + pm.CountSoldiers());
             Debug.Log("shipstrength::" + pm.strengthOfBattleShip);
         }));
 
@@ -45,7 +45,7 @@ public class BattleEnd : MonoBehaviour
                 {
                     if(s.side == Soldier.Side.Player)
                     {
-                        pm.addSoldier(s.weapon);
+                        pm.AddSoldier(s.weapon);
                     }
                 }
                 StartCoroutine(Utils.ExecuteAfterSeconds(endScreenDelay, () =>
